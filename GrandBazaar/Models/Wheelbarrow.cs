@@ -2,12 +2,14 @@
 {
     public class Wheelbarrow
     {
-        public int MaxCapacityPerType { get; set; } = 3;
-
-        public int Jewelry { get; set; } = 0;
-        public int Fabric { get; set; } = 0;
-        public int Spice { get; set; } = 0;
-        public int Fruit { get; set; } = 0;
+        public int MaxCapacity { get; set; } = 3;
+        public Dictionary<Enums.Good, int> Goods { get; set; } = new Dictionary<Enums.Good, int>
+        {
+            { Enums.Good.Jewelry, 0 },
+            { Enums.Good.Fabric, 0 },
+            { Enums.Good.Spice, 0 },
+            { Enums.Good.Fruit, 0 }
+        };
         public int Rubies { get; set; } = 0;
     }
 }
