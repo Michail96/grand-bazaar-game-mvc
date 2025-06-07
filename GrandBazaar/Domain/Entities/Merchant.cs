@@ -11,12 +11,20 @@ namespace GrandBazaar.Domain.Entities
         public Location Location { get; set; }
         public Color Color { get; set; }
         public int AvailableAssistants { get; set; } = 4;
+        public int MaximumAssistants { get; set; } = 4;
         public Wheelbarrow Wheelbarrow { get; set; } = new Wheelbarrow();
 
         public Merchant()
         {
             Rubies = 0;
             Location = new Location { Id = 0, Row = 0, Col = 0 };
+        }
+
+        public bool AddLira(int amount)
+        {
+            if (amount < 0) return false;
+            Lira += amount;
+            return true;
         }
     }
 }

@@ -11,5 +11,15 @@
             { Enums.Good.Fruit, 0 }
         };
         public int Rubies { get; set; } = 0;
+
+        public bool AddGood(Enums.Good goodType, int quantity)
+        {
+            if (Goods[goodType] + quantity <= MaxCapacity)
+            {
+                Goods[goodType] += quantity;
+                return true;
+            }
+            return false;
+        }
     }
 }
