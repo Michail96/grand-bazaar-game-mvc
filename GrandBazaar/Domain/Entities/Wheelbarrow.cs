@@ -1,4 +1,4 @@
-﻿namespace GrandBazaar.Models
+﻿namespace GrandBazaar.Domain.Entities
 {
     public class Wheelbarrow
     {

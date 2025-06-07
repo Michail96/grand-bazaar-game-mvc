@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace GrandBazaar.Models
+namespace GrandBazaar.Domain.Entities
 {
     public class Place
     {

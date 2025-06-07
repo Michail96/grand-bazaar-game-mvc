@@ -1,4 +1,4 @@
-﻿namespace GrandBazaar.Models.Enums
+﻿namespace GrandBazaar.Domain.Enums
 {
     public enum Good
     {
