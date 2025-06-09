@@ -2,10 +2,10 @@
 
 namespace GrandBazaar.Domain.BonusCards
 {
-        public interface IBonusCard
-        {
-            string Name { get; }
-            string Description { get; }
-            bool Use(Merchant merchant, string? playersChoice = null);
+    public interface IBonusCard
+    {
+        string Name { get; }
+        string Description { get; }
+        bool Use(Merchant merchant, string? playersChoice = null);
     }
 }

@@ -12,11 +12,11 @@
         };
         public int Rubies { get; set; } = 0;
 
-        public bool AddGood(Enums.Good goodType, int quantity)
+        public bool AddGood(Enums.Good good, int quantity)
         {
-            if (Goods[goodType] + quantity <= MaxCapacity)
+            if (Goods[good] + quantity <= MaxCapacity)
             {
-                Goods[goodType] += quantity;
+                Goods[good] += quantity;
                 return true;
             }
             return false;

@@ -6,9 +6,16 @@ namespace GrandBazaar.Domain.BonusCards
     {
         public string Name => "Take 5 Lira Card";
         public string Description => "Take 5 Lira from the bank.";
+        private readonly IGameActionValidator _validator;
+
+        public TakeLiraCard(IGameActionValidator validator)
+        {
+            _validator = validator;
+        }
+
         public bool Use(Merchant merchant, string? playersChoice = null)
         {
-            BonusCardValidator.EnsureMerchantNotNull(merchant);
+            _validator.EnsureMerchantNotNull(merchant);
             return merchant.AddLira(5);
         }
     }

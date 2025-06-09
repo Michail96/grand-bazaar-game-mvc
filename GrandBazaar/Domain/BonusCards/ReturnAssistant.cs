@@ -6,9 +6,16 @@ namespace GrandBazaar.Domain.BonusCards
     {
         public string Name => "Return Assistant Card";
         public string Description => "Return an assistant to the supply.";
+        private readonly IGameActionValidator _validator;
+
+        public ReturnAssistant(IGameActionValidator validator)
+        {
+            _validator = validator;
+        }
+
         public bool Use(Merchant merchant, string locationNumber)
         {
-            BonusCardValidator.EnsureMerchantNotNull(merchant);
+            _validator.EnsureMerchantNotNull(merchant);
 
             if (merchant.AvailableAssistants < merchant.MaximumAssistants)
             {
